@@ -7,7 +7,9 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprites name="Characters">
-      <sprite>sprites\sprHero</sprite>
+      <sprite>sprites\sprWalk</sprite>
+      <sprite>sprites\sprStand</sprite>
+      <sprite>sprites\sprJump</sprite>
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\sprDirtBlock</sprite>
@@ -24,6 +26,7 @@
     </objects>
     <objects name="Blocks">
       <object>objects\objDirtBlock</object>
+      <object>objects\objCollider</object>
     </objects>
   </objects>
   <rooms name="rooms">
