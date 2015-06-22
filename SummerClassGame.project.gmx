@@ -13,6 +13,7 @@
     </sprites>
     <sprites name="Blocks">
       <sprite>sprites\sprDirtBlock</sprite>
+      <sprite>sprites\sprSemiTrans</sprite>
     </sprites>
     <sprites name="UI">
       <sprite>sprites\sprMouseCursor</sprite>
@@ -44,7 +45,7 @@
     <room>rooms\testRoom</room>
   </rooms>
   <constants number="1">
-    <constant name="aiming_dist">75</constant>
+    <constant name="aiming_dist">85</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
