@@ -17,9 +17,14 @@
     </sprites>
     <sprites name="UI">
       <sprite>sprites\sprMouseCursor</sprite>
+      <sprite>sprites\sprInventorySquare</sprite>
+      <sprite>sprites\sprHighlightSquare</sprite>
+      <sprite>sprites\sprAxe</sprite>
     </sprites>
     <sprites name="Items">
       <sprite>sprites\sprDirtItem</sprite>
+    </sprites>
+    <sprites name="ItemAnimations">
       <sprite>sprites\sprAxeSwing</sprite>
     </sprites>
   </sprites>
@@ -33,18 +38,26 @@
       <object>objects\objHero</object>
     </objects>
     <objects name="Blocks">
-      <object>objects\objDirtBlock</object>
       <object>objects\objBlockParent</object>
+      <object>objects\objDirtBlock</object>
     </objects>
     <objects name="Items">
+      <object>objects\objItemParent</object>
       <object>objects\objDirtItem</object>
+    </objects>
+    <objects name="ItemAnimations">
       <object>objects\objAxeSwing</object>
+    </objects>
+    <objects name="HUD">
+      <object>objects\objInventory</object>
+      <object>objects\objAxeInventory</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\testRoom</room>
   </rooms>
-  <constants number="1">
+  <constants number="2">
+    <constant name="magent_radius">100</constant>
     <constant name="aiming_dist">85</constant>
   </constants>
   <help>

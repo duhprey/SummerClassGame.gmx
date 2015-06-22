@@ -317,7 +317,7 @@
     <instance objName="objDirtBlock" x="5040" y="2870" name="inst_90BA0A7C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDirtBlock" x="5530" y="2590" name="inst_467FACB4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDirtBlock" x="5600" y="2520" name="inst_E17E3200" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objHero" x="3922" y="2000" name="inst_FBB8F503" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objHero" x="3921" y="2011" name="inst_FBB8F503" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDirtBlock" x="2800" y="2450" name="inst_4E72C931" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDirtBlock" x="4690" y="2380" name="inst_480F4D39" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDirtBlock" x="4340" y="2520" name="inst_BE4DD4C1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -497,6 +497,7 @@
     <instance objName="objDirtBlock" x="5530" y="2450" name="inst_5C1D3995" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDirtBlock" x="5530" y="2380" name="inst_1F3CCDB6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDirtBlock" x="5460" y="2380" name="inst_45D1615F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objInventory" x="0" y="0" name="inst_33F3C1EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
