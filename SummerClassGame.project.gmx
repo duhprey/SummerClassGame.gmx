@@ -17,6 +17,10 @@
     <sprites name="UI">
       <sprite>sprites\sprMouseCursor</sprite>
     </sprites>
+    <sprites name="Items">
+      <sprite>sprites\sprDirtItem</sprite>
+      <sprite>sprites\sprAxeSwing</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\tileSheet1</background>
@@ -29,7 +33,11 @@
     </objects>
     <objects name="Blocks">
       <object>objects\objDirtBlock</object>
-      <object>objects\objCollider</object>
+      <object>objects\objBlockParent</object>
+    </objects>
+    <objects name="Items">
+      <object>objects\objDirtItem</object>
+      <object>objects\objAxeSwing</object>
     </objects>
   </objects>
   <rooms name="rooms">

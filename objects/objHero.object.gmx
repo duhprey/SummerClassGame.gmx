@@ -61,6 +61,30 @@
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>swingingItem</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>noone</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -80,10 +104,10 @@
           <argument>
             <kind>1</kind>
             <string>/// Finds the aim point from the mouse
-center_y = y - sprite_height / 2;
-r_mouse_x = mouse_x - x;
-r_mouse_y = mouse_y - center_y;
-r_mouse_dist = sqrt(r_mouse_x*r_mouse_x + r_mouse_y*r_mouse_y);
+var center_y = y - sprite_height / 2;
+var r_mouse_x = mouse_x - x;
+var r_mouse_y = mouse_y - center_y;
+var r_mouse_dist = sqrt(r_mouse_x*r_mouse_x + r_mouse_y*r_mouse_y);
 aiming_x = x + r_mouse_x / r_mouse_dist * aiming_dist;
 aiming_y = center_y + r_mouse_y / r_mouse_dist * aiming_dist;
 </string>
@@ -107,7 +131,7 @@ aiming_y = center_y + r_mouse_y / r_mouse_dist * aiming_dist;
           <argument>
             <kind>1</kind>
             <string>/// Establishes gravity when off an edge
-if place_empty(x,y + 1) {
+if (instance_place(x,y + 1,objBlockParent) == noone) {
     gravity_direction = 270;
     gravity = 1.0;
 } else
@@ -448,7 +472,7 @@ if place_empty(x,y + 1) {
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="objCollider">
+    <event eventtype="4" ename="objBlockParent">
       <action>
         <libid>1</libid>
         <id>612</id>
@@ -716,6 +740,41 @@ if place_empty(x,y + 1) {
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="6" enumb="50">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Swing the axe item
+if (swingingItem == noone) {
+    swingingItem = instance_create(aiming_x, aiming_y, objAxeSwing);
+    if (aiming_x &gt; x) {
+        swingingItem.image_xscale = 1;
+        swingingItem.image_angle = point_direction(x, y, aiming_x, aiming_y);
+    } else {
+        swingingItem.image_xscale = -1;
+        // mimic the angle as though it's to the right by aiming_x.
+        swingingItem.image_angle = point_direction(x, y, x - aiming_x + x, y - aiming_y + y);
+    }
+    swingingItem.owner = id;
+}
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
     <event eventtype="8" enumb="64">
